@@ -23,19 +23,26 @@ class Emp1 extends Employee{
         console.log(`${this.empName} & ${this.salary}`);
      }
 }
+class Emp2 extends Employee{
+    info(empName:string){
+        this.empName=empName;
+        console.log(`${this.empName}`);
+        
+    }
+}
 let emp1 = new Emp1();
 console.log(emp1);
 emp1.info("Yashu",50000);
 emp1.info("Sam",20000);
 emp1.info("Ram",30000);
 emp1.info("Geetha",60000);
-//non abstract cannot be over ridden but abstract can be over ridden
+let emp2=new Emp2();
+emp2.info("Hari");
+
+//non-abstract cannot be over ridden but abstract can be over ridden
 console.log(emp1.display());
 console.log(emp1.display());
 console.log(emp1.display());
-
-
-
 
 
 
